@@ -130,8 +130,16 @@ public class RequestParamController {
     @ResponseBody
     @RequestMapping("/model-attribute-v1")
     public String modelAttributeV1(@ModelAttribute HelloData helloData){
-        log.info("username={},age={}",helloData.getUsername(),helloData.getAge());
+        /**
+         * 예전 방식
+         * public String modelAttributeV1(@RequestParam String username,@RequestParam int age)
+         * HelloData helloData = new HelloData();
+         * helloData.serUsername(username);
+         * helloData.serAge(age);
+         */
 
+        log.info("username={},age={}",helloData.getUsername(),helloData.getAge());
+        log.info("HelloData={}",helloData);
         return "ok";
     }
     /**
