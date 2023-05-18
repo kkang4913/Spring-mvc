@@ -37,4 +37,9 @@ public class ResponseViewController {
     public void responseViewV3(Model model) {
         model.addAttribute("data", "hello!!");
     }
+
+    /**
+     * 참고 메시지
+     * @ResponseBody , HttpEntity를 사용하면 뷰템플릿이 아닌 HTTP 바디에 직접 보낼 수 있다.
+     */
 }
